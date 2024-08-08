@@ -12,20 +12,19 @@
     <div class="wrapper">
       <img class="single-image" src="Antoha.jpg" width="339" height="394" alt="Фото Антохи">
       <p class="image-caption">Happy birthday, meine geliebte schwester!</p>
-      <!-- <audio id="my-audio" preload="auto" loop="loop" >
-        <source src="susanna.mp3" type="audio/mp3" />
-      </audio> -->
-      <iframe src="silence.mp3" type="audio/mp3" allow="autoplay" id="audio" style="display:none"></iframe>
-      <video id="player" autoplay controls loop>
+      <button class="button-play">Жми сюды</button>
+      <audio id="music" autoplay>
         <source src="susanna.mp3" type="audio/mp3">
-      </video>
+      </audio>
     </div>
-  <!-- <script defer>
-    window.onload = function() {
-      const myAudio = document.querySelector("#player");
-      console.log(myAudio);
-      myAudio.play();
-    }
-  </script> -->
+  <script defer>
+    const music = document.querySelector('#music');
+    const playButton = document.querySelector('.button-play');
+    
+    playButton.addEventListener('click', ()=>{
+      music.play();
+    })
+  
+  </script>
 </body>
 </html>
